@@ -8,6 +8,15 @@ class Entraineur(
     var id: Long?,
     var nom: String,
     var argent: Int,
-    ){
+
+    @OneToMany(mappedBy = "entraineur",cascade = [CascadeType.ALL], orphanRemoval = true)
+    var joueur: MutableList<Joueur> = mutableListOf(),
+
+    @OneToMany(mappedBy = "entraineur",cascade = [CascadeType.ALL], orphanRemoval = true)
+    var individuMonstre: MutableList<IndividuMonstre> = mutableListOf(),
+
+    @OneToMany(mappedBy = "entraineur",cascade = [CascadeType.ALL], orphanRemoval = true)
+    var item: MutableList<Item> = mutableListOf(),
+){
 
 }
