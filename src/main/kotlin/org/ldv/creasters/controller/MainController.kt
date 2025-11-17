@@ -13,4 +13,29 @@ class MainController (){
     fun home():String{
         return "index"
     }
+
+    @GetMapping("/a-propos")
+    fun apropos():String{
+        return "a-propos"
+    }
+
+    @GetMapping("/contact")
+    fun contact():String{
+        return "contact"
+    }
+
+    @GetMapping("/inscription")
+    fun inscription():String{
+        return "inscription"
+    }
+
+    @GetMapping("/produit")
+    fun produit():String{
+        return "produit"
+    }
+
+    @GetMapping("/rgpd")
+    fun rgpd():String{
+        return "rgpd"
+    }
 }
