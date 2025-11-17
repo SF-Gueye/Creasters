@@ -5,9 +5,18 @@ import jakarta.persistence.*
 class Item (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
     var id: Long?,
     var nom: String,
-    var description: String
+    var description: String,
+
+    @ManyToOne
+    @JoinColumn(name = "image_id")
+    var image: Image? = null,
+
+    @ManyToOne
+    @JoinColumn(name = "entraineur_id")
+    var entraineur: Entraineur? = null
 ){
 
 }

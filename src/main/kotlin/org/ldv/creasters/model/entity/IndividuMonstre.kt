@@ -5,6 +5,7 @@ import jakarta.persistence.*
 class IndividuMonstre(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
     var id: Long?,
     var nom: String,
     //var especeMonstre: EspeceMonstre,
@@ -19,6 +20,15 @@ class IndividuMonstre(
     var exp: Double,
     var pv: Int,
     //var Entraineur: Entraineur?
-    ){
+
+    @ManyToOne
+    @JoinColumn(name = "especeMonstre_id")
+    var especeMonstre: EspeceMonstre? = null,
+
+    @ManyToOne
+    @JoinColumn(name = "entraineur_id")
+    var entraineur: Entraineur? = null
+
+){
 
 }

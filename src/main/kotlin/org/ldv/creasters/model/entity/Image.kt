@@ -7,5 +7,11 @@ class Image(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long?,
     var lien: String,
+
+    @OneToMany(mappedBy = "image",cascade = [CascadeType.ALL], orphanRemoval = true)
+    var zone: MutableList<Zone> = mutableListOf(),
+
+    @OneToMany(mappedBy = "image",cascade = [CascadeType.ALL], orphanRemoval = true)
+    var item: MutableList<Item> = mutableListOf()
 ) {
 }

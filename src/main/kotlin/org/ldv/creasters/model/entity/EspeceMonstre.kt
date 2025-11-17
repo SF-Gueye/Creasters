@@ -5,6 +5,7 @@ import jakarta.persistence.*
 class EspeceMonstre(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
     var id: Long?,
     var nom: String,
     var type: String,
@@ -22,7 +23,11 @@ class EspeceMonstre(
     var modPv: Double,
     var description: String?,
     var particularitese: String?,
-    var caracteres: String?
-    ){
+    var caracteres: String?,
+
+
+    @OneToMany(mappedBy = "especeMonstre",cascade = [CascadeType.ALL], orphanRemoval = true)
+var individuMonstre: MutableList<IndividuMonstre> = mutableListOf()
+){
 
 }
