@@ -14,4 +14,5 @@ class Image(
     @OneToMany(mappedBy = "image",cascade = [CascadeType.ALL], orphanRemoval = true)
     var item: MutableList<Item> = mutableListOf()
 ) {
+
 }
