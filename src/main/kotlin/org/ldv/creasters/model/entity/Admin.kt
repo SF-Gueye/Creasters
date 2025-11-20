@@ -6,6 +6,7 @@ import jakarta.persistence.*
 class Admin(
     nom: String,
     mdp: String,
+    email: String,
 
-): Joueur(identifiant = nom, mdp = mdp )
+): Joueur(identifiant = nom, mdp = mdp, email = email )
 {}

@@ -4,7 +4,9 @@ import org.ldv.creasters.model.dao.DAOEspeceMonstre
 import org.ldv.creasters.model.dao.DAOIndividuMonstre
 import org.ldv.creasters.model.dao.DAOItem
 import org.ldv.creasters.model.dao.DAOZone
+import org.ldv.creasters.model.entity.Admin
 import org.ldv.creasters.model.entity.EspeceMonstre
+import org.ldv.creasters.model.entity.Joueur
 import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Component
 //TODO finir la classe en enlevant les commentaires entre /* et */
@@ -72,6 +74,26 @@ class DataInitializer(
             cheminImageFace = "",
             cheminImageDos = ""
         )
+        //TODO finir ça
+        /*val admin = Admin(
+            id = null,
+            nom = "Super",
+            prenom = "Admin",
+            email = "admin@admin.com",
+            mdp = passwordEncoder.encode("admin123"), // mot de passe hashé
+            role = roleAdmin
+        )
+
+        val joueur = Joueur(
+            id = null,
+            nom = "Pig",
+            prenom = "Peppa",
+            email = "joueur@joueur.com",
+            mdp = passwordEncoder.encode("joueur123"), // mot de passe hashé
+            role = roleJoueur
+        )
+
+        DAOJoueur.saveAll(listOf(admin, joueur))*/
         /*val catJouet = Categorie(nom = "Jouets")
         val catMaison = Categorie(nom = "Maison")
 

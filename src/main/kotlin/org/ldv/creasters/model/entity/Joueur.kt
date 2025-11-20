@@ -11,6 +11,7 @@ class Joueur(
     var id: Long? = null,
     var identifiant: String,
     var mdp: String,
+    var email: String,
     //var boiteMonstre: IndividuMonstre?,
     //var sacàItem: Item?,
 
