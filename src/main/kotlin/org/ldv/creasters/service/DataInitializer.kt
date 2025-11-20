@@ -7,7 +7,7 @@ import org.ldv.creasters.model.dao.DAOZone
 import org.ldv.creasters.model.entity.EspeceMonstre
 import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Component
-
+//TODO finir la classe en enlevant les commentaires entre /* et */
 @Component
 class DataInitializer(
     private val DAOEspeceMonstre: DAOEspeceMonstre,
