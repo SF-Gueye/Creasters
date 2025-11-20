@@ -14,7 +14,10 @@ class Zone (
 
     @ManyToOne
     @JoinColumn(name = "image_id")
-    var image: Image? = null
+    var image: Image? = null,
+
+    @ManyToMany(mappedBy = "zone")
+    var individuMonstre: MutableList<IndividuMonstre> = mutableListOf()
     ){
 
 }

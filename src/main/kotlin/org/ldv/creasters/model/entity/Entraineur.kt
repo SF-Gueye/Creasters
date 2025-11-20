@@ -5,9 +5,11 @@ import jakarta.persistence.*
 class Entraineur(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
     var id: Long?,
     var nom: String,
     var argent: Int,
+    //var equipeMonstre: IndividuMonstre? = null,
 
     @OneToMany(mappedBy = "entraineur",cascade = [CascadeType.ALL], orphanRemoval = true)
     var joueur: MutableList<Joueur> = mutableListOf(),
@@ -17,6 +19,10 @@ class Entraineur(
 
     @OneToMany(mappedBy = "entraineur",cascade = [CascadeType.ALL], orphanRemoval = true)
     var item: MutableList<Item> = mutableListOf(),
+
+    @OneToMany(mappedBy = "entraineur", orphanRemoval = true)
+    var partie: MutableList<Partie> = mutableListOf()
+
 ){
 
 }

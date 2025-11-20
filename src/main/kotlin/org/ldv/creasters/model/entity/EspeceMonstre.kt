@@ -6,7 +6,7 @@ class EspeceMonstre(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
-    var id: Long?,
+    var id: Long?=null,
     var nom: String,
     var type: String,
     var baseAttaque: Int,
@@ -22,8 +22,10 @@ class EspeceMonstre(
     var modDefenseSp: Double,
     var modPv: Double,
     var description: String?,
-    var particularitese: String?,
+    var particularites: String?,
     var caracteres: String?,
+    var cheminImageFace:String?,
+    var cheminImageDos:String?,
 
 
     @OneToMany(mappedBy = "especeMonstre",cascade = [CascadeType.ALL], orphanRemoval = true)
