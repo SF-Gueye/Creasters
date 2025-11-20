@@ -72,7 +72,7 @@ class DataInitializer(
             cheminImageFace = "",
             cheminImageDos = ""
         )
-        val catJouet = Categorie(nom = "Jouets")
+        /*val catJouet = Categorie(nom = "Jouets")
         val catMaison = Categorie(nom = "Maison")
 
         categorieDAO.saveAll(listOf(catGadget, catJouet, catMaison))
@@ -107,6 +107,6 @@ class DataInitializer(
             )
         )
 
-        println("✅ Données initiales insérées : ${categorieDAO.count()} catégories, ${articleDAO.count()} articles.")
+        println("✅ Données initiales insérées : ${categorieDAO.count()} catégories, ${articleDAO.count()} articles.")*/
     }
 }
