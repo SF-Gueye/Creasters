@@ -6,6 +6,7 @@ import org.ldv.creasters.model.dao.DAOItem
 import org.ldv.creasters.model.dao.DAOZone
 import org.ldv.creasters.model.entity.Admin
 import org.ldv.creasters.model.entity.EspeceMonstre
+import org.ldv.creasters.model.entity.IndividuMonstre
 import org.ldv.creasters.model.entity.Joueur
 import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Component
@@ -29,9 +30,10 @@ class DataInitializer(
         println("🚀 Initialisation des données...")
 
         // === Catégories ===
-        val scorpide= EspeceMonstre(
+        //Creasters Nael
+        val scorpide = EspeceMonstre(
 
-            nom = "scorpide",
+            nom = "Scorpide",
             type = "insecte/poison",
             basePv = 13,
             baseAttaque = 6,
@@ -52,28 +54,53 @@ class DataInitializer(
             cheminImageDos = ""
         )
 
-        val Dracosteel = EspeceMonstre(
+        val behemothprimaris = EspeceMonstre(
 
-            nom = "Dracosteel",
-            type = "Dragon/Acier",
+            nom = "Behemoth Primaris",
+            type = "Cosmic",
+            basePv = 5,
+            baseAttaque = 5,
+            baseDefense= 5,
+            baseAttaqueSp = 5,
+            baseDefenseSp= 5,
+            baseVitesse= 5,
+            modAttaque= 11.0,
+            modDefense= 11.0,
+            modVitesse= 11.0,
+            modAttaqueSp= 11.0,
+            modDefenseSp= 11.0,
+            modPv= 11.0,
+            description= "des êtres aussi vieux que l'univers lui meme a la puissance transcendant la nature il son au nombre de 3",
+            particularites= "chacun des trois behemoth possède une apparence unique ",
+            caracteres= "Error information introuvable",
+            cheminImageFace = "°o°",
+            cheminImageDos = "-_-"
+        )
+
+        //Creasters Fanis
+        val Dragofire = EspeceMonstre(
+
+            nom = "Dragofire",
+            type = "Dragon/Feu",
             basePv = 9,
             baseAttaque = 7,
             baseDefense= 5,
             baseAttaqueSp = 16,
             baseDefenseSp= 5,
-            baseVitesse= 12,
+            baseVitesse= 10,
             modAttaque= 9.0,
             modDefense= 8.0,
             modVitesse= 15.0,
             modAttaqueSp= 19.0,
             modDefenseSp= 8.0,
             modPv= 12.0,
-            description= "Un petit dragon en acier qui a un souffle qui peut faire un bang sonore et faire fondre n'importe quel matière.",
-            particularites= "",
-            caracteres= "",
-            cheminImageFace = "",
-            cheminImageDos = ""
+            description= "Une créature rouge qui peut utiliser du plasma.",
+            particularites= "Les écailles du Dragon sont très resistantes et peuvent resister a de forte chaleur. Il a de grandes ailes et des petites ailes au bout de sa queue.",
+            caracteres= "Il n'attaque que lorsqu'il se sens en danger ou lorsqu'il se fait attaquer pour riposter.",
+            cheminImageFace = "°o°",
+            cheminImageDos = "-_-"
         )
+
         //TODO finir ça
         /*val admin = Admin(
             id = null,
@@ -86,8 +113,8 @@ class DataInitializer(
 
         val joueur = Joueur(
             id = null,
-            nom = "Pig",
-            prenom = "Peppa",
+            nom = "Lambda",
+            prenom = "Joueur",
             email = "joueur@joueur.com",
             mdp = passwordEncoder.encode("joueur123"), // mot de passe hashé
             role = roleJoueur
@@ -97,7 +124,7 @@ class DataInitializer(
         /*val catJouet = Categorie(nom = "Jouets")
         val catMaison = Categorie(nom = "Maison")
 
-        categorieDAO.saveAll(listOf(catGadget, catJouet, catMaison))
+        categorieDAO.saveAll (listOf (catGadget, catJouet, catMaison))
 
         // === Articles ===
 
