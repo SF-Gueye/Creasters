@@ -9,7 +9,7 @@ class Entraineur(
     var id: Long?,
     var nom: String,
     var argent: Int,
-    //var equipeMonstre: IndividuMonstre? = null,
+    var equipeMonstre: IndividuMonstre? = null,
 
     @OneToMany(mappedBy = "entraineur",cascade = [CascadeType.ALL], orphanRemoval = true)
     var joueur: MutableList<Joueur> = mutableListOf(),

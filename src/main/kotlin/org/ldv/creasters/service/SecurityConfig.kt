@@ -26,7 +26,7 @@ class SecurityConfig {
         http
             //Restriction des endpoints en fonction du role
             .authorizeHttpRequests {
-                it.requestMatchers("/Creasters", "/Creasters/register", "/Creasters/login", "/css/**", "/js/**", "/img/**", "/favicon.ico").permitAll()
+                it.requestMatchers("/**","/Creasters", "/Creasters/register", "/Creasters/login", "/css/**", "/js/**", "/img/**", "/favicon.ico").permitAll()
                     // Autoriser l'accès pour les utilisateurs avec le rôle "ADMIN" à /admin/**
                     .requestMatchers("/Creasters/Admin/**").hasRole("ADMIN")
                     // Autoriser l'accès pour les utilisateurs avec le rôle "JOUEUR" à /Joueur/**

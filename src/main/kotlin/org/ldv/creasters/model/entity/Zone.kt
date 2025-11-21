@@ -9,8 +9,8 @@ class Zone (
     var id: Long?,
     var nom: String,
     var expZone: Double,
-//    var zoneSuivante: Zone?,
-//    var zonePrecedente: Zone?,
+    var zoneSuivante: Zone?,
+    var zonePrecedente: Zone?,
 
     @ManyToOne
     @JoinColumn(name = "image_id")

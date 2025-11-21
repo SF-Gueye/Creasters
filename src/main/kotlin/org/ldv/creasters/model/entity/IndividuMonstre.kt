@@ -8,7 +8,7 @@ class IndividuMonstre(
     @Column(nullable = false)
     var id: Long?,
     var nom: String,
-    //var especeMonstre: EspeceMonstre,
+    var espece: EspeceMonstre?,
     var niveau: Int,
     var attaque: Int,
     var defense: Int,
@@ -20,7 +20,7 @@ class IndividuMonstre(
     var potentiel: Double,
     var exp: Double,
     var pv: Int,
-    //var Entraineur: Entraineur?
+    var Entraineur: Entraineur? = null,
 
     @ManyToOne
     @JoinColumn(name = "especeMonstre_id")

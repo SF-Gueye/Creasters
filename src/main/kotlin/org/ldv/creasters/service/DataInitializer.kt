@@ -48,10 +48,10 @@ class DataInitializer(
             modDefenseSp= 6.0,
             modPv= 16.0,
             description= "Creature du desert au corp de scorpion et au cou de serpent il se cache dans le sable et chasse en meute.",
-            particularites= "la carapace des scorpides est assez épaisse pour maintenir leur température interne froide et possède une tres grande resistance",
-            caracteres= "",
-            cheminImageFace = "",
-            cheminImageDos = ""
+            particularites= "la carapace des scorpides est assez épaisse pour maintenir leur température interne froide et possède une tres grande resistance, le dimorphisme sexuelle est tres prononcer entre les males et les femelle celle ci son un peu plus grosse et ne possède pas de dard.",
+            caracteres= "les Scorpides sont de nature calme et n'attaque pas vraiment les autres créature, mais pendant la saison des amours les femelle deviennent extremement territorial et violente avec toute creature.",
+            cheminImageFace = "°o°",
+            cheminImageDos = "-_-"
         )
 
         val behemothprimaris = EspeceMonstre(
@@ -126,16 +126,8 @@ class DataInitializer(
 
         categorieDAO.saveAll (listOf (catGadget, catJouet, catMaison))
 
-        // === Articles ===
-
-        val articleMontre = Article(
-            nom = "Montre connectée",
-            description = "Montre connectée avec capteur de fréquence cardiaque et suivi d’activité.",
-            stock = 20,
-            prix = 79.99,
-            lienImage = "https://example.com/images/montre-connectee.jpg",
-            categorie = catGadget
-        )
+         === Articles ===
+        val monstreScorpide = IndividuMonstre(1, "Scorpide", scorpide, 1800, 1500.0)
 
         val articleDrone = Article(
             nom = "Mini drone",
@@ -148,14 +140,9 @@ class DataInitializer(
 
 
         // === Sauvegarde des articles ===
-        articleDAO.saveAll(
-            listOf(
-                articleMontre,
-                articleDrone
+       val Melun = Zone(1, "Melun", "Zone de combat des Meluns")
 
-            )
-        )
 
-        println("✅ Données initiales insérées : ${categorieDAO.count()} catégories, ${articleDAO.count()} articles.")*/
+        println("✅ Données initiales insérées : $")*/
     }
 }
